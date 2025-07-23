@@ -46,6 +46,13 @@ npl에 대해 공부한 내용을 정리함.
 |[understanding_trainning.ipynb](./transformers/understanding_trainning.ipynb)| 다른 pytorch 훈련법과 비교해 봄 |
 |[trainning.ipnb](./transformers/training.ipynb)| 랜덤 데이터로 훈련시키고, greedy_decoding함.|
 
+--- 
+#### 실행환경 (docker): 
+docker에서 실행될 수 있음.  
+[Dockerfile](./Dockers/The_Annotated_transformation/Dockerfile) 파일과 [build.sh](./Dockers/The_Annotated_transformation/build.sh), [run.sh](./Dockers/The_Annotated_transformation/run.sh) 참고 해라.
+
+---
+
 #### **custom dataset 훈련시키는 예제 (영어-한국어)**  
 Annotated Transformer-old로 초 심플한 영-한 번역기를 훈련 시킴.
 
