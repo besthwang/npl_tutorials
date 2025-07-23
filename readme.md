@@ -24,6 +24,45 @@ npl에 대해 공부한 내용을 정리함.
 |[trainning_the_annotated_transformer_decoding.ipynb](./transformers/trainning_the_annotated_transformer_decoding.ipynb)| 싱글 gpu로 transformer를 훈련 시킬수 있음. de-en 훈련 시킴|
 |[Results for Transformer.ipynb](./transformers/Results%20for%20Transformer.ipynb) | 훈련시킨 모델을 불러와 테스트 할 수 있음. |
 
+**Conda 가상환경 생성:**
+- multi-gpu로 훈련시키기 위해 windows 서버 2019를 사용함.
+- 윈도우 환경기준임 (windows 서버 2019에서 검증함.)
+- [environment.yml](./Dockers/The_Annotated_transformation/environment.yml)로 
+가상환경 생성하면됨.
+```
+conda env create -f environment.yml
+```
+- pytorch1.11+cu113 기반임
+- spacy를 위해 visual studio 2022이 설치되어야함.
+- windows server 2019에서 동작 시키기 위해 train_worker() 함수를 수정함. 
+  ``` python
+    ddp_free_port = 60000  
+    dist.init_process_group(
+        "gloo",init_method=f"tcp://localhost:{ddp_free_port}",  rank=gpu, world_size=ngpus_per_node, timeout=timedelta(days=1),
+    )
+  ```
+- multi-gpu 훈련을 위해서는 
+    - load_trained_model()에서 config 내용을 수정 해야함.
+        ``` python
+        def load_trained_model():
+            config = {
+                "batch_size": 64,
+                "distributed": True,
+                "num_epochs": 100,
+                "accum_iter": 10,
+                "base_lr": 1.0,
+                "max_padding": 72,
+                "warmup": 3000,
+                "file_prefix": "multi30k_model_",
+            }
+        ```
+
+    - cmd 창에서 실행시켜야 함.
+
+        ``` text
+            > python transformer_v2.py
+        ```
+
 #### 2.2 **Annotated Transformer-old**
 
 ----------------------
@@ -65,15 +104,7 @@ Annotated Transformer-old로 초 심플한 영-한 번역기를 훈련 시킴.
 |[simple_custom_trainning.ipynb](./transformers/simple_custom_training.ipynb)| 간단한 영-한 번역기를 훈련시킴, GPU에서 동작하고 Dataloader를 사용하도록 코드를 수정함. 32 example의 코퍼스 임.|
 ---
 
-**Conda 가상환경 생성:**
-- 윈도우 환경기준임 (windows 서버 2019에서 검증함.)
-- [environment.yml](./Dockers/The_Annotated_transformation/environment.yml)로 
-가상환경 생성하면됨.
-- pytorch1.11+cu113 기반임
-- spacy를 위해 visual studio 2022이 설치되어야함.
-```
-conda env create -f environment.yml
-```
+
 
 
 
