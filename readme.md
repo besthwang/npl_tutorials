@@ -29,7 +29,7 @@ npl에 대해 공부한 내용을 정리함.
 ----------------------
 | 파일명 | descrption |
 |-------|-------------|
-|Batch_datagen.ipynb| Batch 클래스를 분석하고 사용법은 정리함, example로 훈련을 위한 batch 데이터를 만듬|
+|Batch_datagen.ipynb| Batch 클래스를 분석하고 사용법을 정리함, example로 훈련을 위한 batch 데이터를 만듬|
 |decoder_2nd_layer.ipynb|디코더의 두번째 서브층인 인코더-디코더 어텐션을 분석함|
 |decoder_ex.py | encoder과 decoder를 manual로 만들어 봄|
 |decoder_selfattention_look_a_head_mask.ipynb| 디코더의 첫번째 서브층의  셀프 어텐션과 룩-어헤드 마스크를 분석|
@@ -52,10 +52,10 @@ Annotated Transformer-old로 초 심플한 영-한 번역기를 훈련 시킴.
 ----------------------
 | 파일명 | descrption |
 |-------|-------------|
-|custom_dataset_ex1.ipynb| 한국어, 영어를 토큰화 함|
-|custom_dataset_ex2.ipynb| |
-|make a custom vocab.ipynb | |
-|simple_custom_trainning.ipynb||
+|custom_dataset_ex1.ipynb| nltk로 한국어, 영어를 토큰화 함|
+|custom_dataset_ex2.ipynb| 한국어는 Okt로   영어는 spacy로 토큰화|
+|make a custom vocab.ipynb | 한국어를 토큰화, id 변환, 패딩등 특수문자를 붙이는 연습을 해 봄 |
+|simple_custom_trainning.ipynb| 간단한 영-한 번역기를 훈련시킴, GPU에서 동작하고 Dataloader를 사용하도록 코드를 수정함. 32 example의 코퍼스 임.|
 ---
 
 
