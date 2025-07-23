@@ -20,16 +20,16 @@ npl에 대해 공부한 내용을 정리함.
 ----------------------
 | 파일명 | descrption |
 |-------|-------------|
-|transformer_v2.py | transformer 모델과 토큰 처리를 위한 모든 코드가 포함되어 있고, Multi-GPU(4)로 훈련가능함 de-en |
-|trainning_the_annotated_transformer_decoding.ipynb| 싱글 gpu로 transformer를 훈련 시킬수 있음. de-en 훈련 시킴|
-|Results for Transformer.ipynb| 훈련시킨 모델을 불러와 테스트 할 수 있음. |
+|[transformer_v2.py](./transformers/transformer_v2.py) | transformer 모델과 토큰 처리를 위한 모든 코드가 포함되어 있고, Multi-GPU(4)로 훈련가능함 de-en |
+|[trainning_the_annotated_transformer_decoding.ipynb](./transformers/trainning_the_annotated_transformer_decoding.ipynb)| 싱글 gpu로 transformer를 훈련 시킬수 있음. de-en 훈련 시킴|
+|[Results for Transformer.ipynb](./transformers/Results%20for%20Transformer.ipynb) | 훈련시킨 모델을 불러와 테스트 할 수 있음. |
 
 #### **Annotated Transformer-old**
 
 ----------------------
 | 파일명 | descrption |
 |-------|-------------|
-|Batch_datagen.ipynb| Batch 클래스를 분석하고 사용법을 정리함, example로 훈련을 위한 batch 데이터를 만듬|
+|Batch_datagen.ipynb| Batch 클래스를 분석하고 사용법을 정리함, example로 훈련 시키기 위한 batch 데이터를 만듬|
 |decoder_2nd_layer.ipynb|디코더의 두번째 서브층인 인코더-디코더 어텐션을 분석함|
 |decoder_ex.py | encoder과 decoder를 manual로 만들어 봄|
 |decoder_selfattention_look_a_head_mask.ipynb| 디코더의 첫번째 서브층의  셀프 어텐션과 룩-어헤드 마스크를 분석|
