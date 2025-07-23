@@ -4,17 +4,17 @@ npl에 대해 공부한 내용을 정리함.
 각 폴더의 내용을 설명한다. 
 
 
-## basics
+## 1. basics
 기본적인 encoder-decoder를 LSTM으로 구현함.
 
-## transformers
+## 2. transformers
 
 **transformer**([Attentions Is All You Need](https://arxiv.org/pdf/1706.03762))를 이해하기 위해 [`딥 러닝을 이용한 자연어 처리 입문`](https://wikidocs.net/book/2155)의 <br> [16-01 트랜스포머(Transformer)](https://wikidocs.net/31379)을 참고하였고, [The Annotated Transformer-old](https://nlp.seas.harvard.edu/2018/04/03/attention.html), <br> [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/)의 코드를
 라인 단위로 분석하고 실행해본 과정을 정리함.
 
 ### 각 파일 설명
 
-#### **Annotated Transformer**
+#### 2.1 **Annotated Transformer**
  [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/)의 코드를 분석하고 실행함.
 
 ----------------------
@@ -24,7 +24,7 @@ npl에 대해 공부한 내용을 정리함.
 |[trainning_the_annotated_transformer_decoding.ipynb](./transformers/trainning_the_annotated_transformer_decoding.ipynb)| 싱글 gpu로 transformer를 훈련 시킬수 있음. de-en 훈련 시킴|
 |[Results for Transformer.ipynb](./transformers/Results%20for%20Transformer.ipynb) | 훈련시킨 모델을 불러와 테스트 할 수 있음. |
 
-#### **Annotated Transformer-old**
+#### 2.2 **Annotated Transformer-old**
 
 ----------------------
 | 파일명 | descrption |
@@ -47,13 +47,13 @@ npl에 대해 공부한 내용을 정리함.
 |[trainning.ipnb](./transformers/training.ipynb)| 랜덤 데이터로 훈련시키고, greedy_decoding함.|
 
 --- 
-#### 실행환경 (docker): 
+#### 2.2.1 실행환경 (docker): 
 docker에서 실행될 수 있음.  
 [Dockerfile](./Dockers/The_Annotated_transformation/Dockerfile) 파일과 [build.sh](./Dockers/The_Annotated_transformation/build.sh), [run.sh](./Dockers/The_Annotated_transformation/run.sh) 참고 해라.
 
 ---
 
-#### **custom dataset 훈련시키는 예제 (영어-한국어)**  
+#### 2.3 **custom dataset 훈련시키는 예제 (영어-한국어)**  
 Annotated Transformer-old로 초 심플한 영-한 번역기를 훈련 시킴.
 
 ----------------------
