@@ -47,9 +47,9 @@ npl에 대해 공부한 내용을 정리함.
 |[trainning.ipnb](./transformers/training.ipynb)| 랜덤 데이터로 훈련시키고, greedy_decoding함.|
 
 --- 
-#### 2.2.1 실행환경 (docker): 
-docker에서 실행될 수 있음.  
-[Dockerfile](./Dockers/The_Annotated_transformation/Dockerfile) 파일과 [build.sh](./Dockers/The_Annotated_transformation/build.sh), [run.sh](./Dockers/The_Annotated_transformation/run.sh) 참고 해라.
+**실행환경 (docker):**   
+- docker에서 실행될 수 있음.  
+- [Dockerfile](./Dockers/The_Annotated_transformation/Dockerfile) 파일과 [build.sh](./Dockers/The_Annotated_transformation/build.sh), [run.sh](./Dockers/The_Annotated_transformation/run.sh) 참고 해라.
 
 ---
 
@@ -65,7 +65,15 @@ Annotated Transformer-old로 초 심플한 영-한 번역기를 훈련 시킴.
 |[simple_custom_trainning.ipynb](./transformers/simple_custom_training.ipynb)| 간단한 영-한 번역기를 훈련시킴, GPU에서 동작하고 Dataloader를 사용하도록 코드를 수정함. 32 example의 코퍼스 임.|
 ---
 
-
+**Conda 가상환경 생성:**
+- 윈도우 환경기준임 (windows 서버 2019에서 검증함.)
+- [environment.yml](./Dockers/The_Annotated_transformation/environment.yml)로 
+가상환경 생성하면됨.
+- pytorch1.11+cu113 기반임
+- spacy를 위해 visual studio 2022이 설치되어야함.
+```
+conda env create -f environment.yml
+```
 
 
 
