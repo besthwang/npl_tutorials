@@ -14,4 +14,4 @@ docker run --gpus all \
 -p 8888:8888 -p 6006:6006 -p 8080:8080 \
 --rm -it \
 --env="QT_X11_NO_MITSHM=1"  \
---name pytorch211 pytorch211:latest
+--name pytorch250 pytorch250:latest

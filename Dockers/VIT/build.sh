@@ -17,7 +17,7 @@ case $# in
         ;;
 esac
 
-docker build -t pytorch211:${TAG} .
+docker build -t pytorch250:${TAG} .
 
 # if [[ $PUSH -eq 1 && $? -eq 0 ]]; then
 #     docker push specialhwang/cuda113-pytorch:${TAG}
